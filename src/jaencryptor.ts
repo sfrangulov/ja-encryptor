@@ -35,7 +35,7 @@ export default class JaEncryptor {
     }
     this.key = options.key;
     this.iv = options.iv || "1234567890ABCDEF";
-    if (options.key.length != IV_LENGTH) {
+    if (this.iv.length != IV_LENGTH) {
       throw new Error(
         "Iv must be " + IV_LENGTH + " characters long"
       );
